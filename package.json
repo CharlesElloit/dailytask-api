@@ -1,0 +1,24 @@
+{
+  "name": "dailytaks-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node api/v1/src/index.js",
+    "watch:dev": "nodemon api/v1/src/index.js",
+    "dev": "yarn run watch:dev",
+    "lint": "eslint ."
+  },
+  "author": "Charles Elloit",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "helmet": "^4.6.0",
+    "joi": "^17.4.0",
+    "mongoose": "^5.12.14"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
