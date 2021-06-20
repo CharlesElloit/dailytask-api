@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node api/v1/src/index.js",
-    "watch:dev": "nodemon api/v1/src/index.js",
+    "start": "node index.js",
+    "watch:dev": "nodemon index.js",
     "dev": "yarn run watch:dev",
     "lint": "eslint ."
   },
@@ -19,6 +19,7 @@
     "mongoose": "^5.12.14"
   },
   "devDependencies": {
+    "eslint": "^7.29.0",
     "nodemon": "^2.0.7"
   }
 }
