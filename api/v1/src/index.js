@@ -6,14 +6,22 @@ const cors = require("cors")
 const app = express();
 require("dotenv").config();
 const appRoutes = require("./routes")
-const DBConnection = require("./configs/db-cofig");
+const DBConnection = require("./configs/config.db");
 
 app.use(cors());
 app.use(helmet());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-DBConnection(process.env.MONGODB_URI);
+let DBConnectionUri;
+
+if(process.env.NODE_ENV === "development") {
+  DBConnectionUri = process.env.LOCAL_MONGODB_URI;
+}else {
+  DBConnectionUri = process.env.MONGODB_URI;
+}
+
+DBConnection(DBConnectionUri);
 
 app.use("/", appRoutes);
 
