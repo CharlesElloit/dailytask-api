@@ -24,5 +24,10 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: ${{ matrix.node-version }}
-    - run: yarn install --ignore-engines
-    - run: yarn run build --if-present
+    - uses: borales/actions-yarn@v2.0.0
+      with:
+        cmd: install --ignore-engines # this will run yarn install command to install the dependencies.
+    - uses: borales/actions-yarn@v2.0.0
+      with: 
+        cmd: build --if-present # Run build command if present in package.json.
+
