@@ -2,12 +2,11 @@ const mongoose = require("mongoose");
 
 const workspaceSchema = new mongoose.Schema({
   title: {
-    type: String, required: true, trim: true, lowercase: true, max: 100
+    type: String, required: true, trim: true, lowercase: true, max: 100,
   },
   projects: [
-    { type: mongoose.Schema.Types.ObjectId, ref: "Project" }
+    { type: mongoose.Schema.Types.ObjectId, ref: "Project" },
   ],
-}, { timestamps: true }
-)
+}, { timestamps: true });
 
-module.exports = mongoose.model("Workspace", workspaceSchema)
+module.exports = mongoose.model("Workspace", workspaceSchema);

@@ -1,11 +1,10 @@
-"use strict"
-
 const express = require("express");
 const helmet = require("helmet");
-const cors = require("cors")
+const cors = require("cors");
+
 const app = express();
 require("dotenv").config();
-const appRoutes = require("./routes")
+const appRoutes = require("./routes");
 const DBConnection = require("./configs/config.db");
 
 app.use(cors());
@@ -15,9 +14,9 @@ app.use(express.urlencoded({ extended: true }));
 
 let DBConnectionUri;
 
-if(process.env.NODE_ENV === "development") {
+if (process.env.NODE_ENV === "development") {
   DBConnectionUri = process.env.LOCAL_MONGODB_URI;
-}else {
+} else {
   DBConnectionUri = process.env.MONGODB_URI;
 }
 

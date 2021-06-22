@@ -6,8 +6,26 @@
     "start": "node index.js",
     "watch:dev": "nodemon index.js",
     "dev": "yarn run watch:dev",
-    "lint": "eslint ."
+    "test": "jest",
+    "lint": "node ./node_modules/eslint/bin/eslint . --ignore-path .gitignore",
+    "eslint:github-action": "node ./node_modules/eslint/bin/eslint . --ignore-path .gitignore --max-warnings 0",
+    "prepare": "husky install"
   },
+  "lint-staged": {
+    "**/*.{js, ts}": [
+      "yarn run lint"
+    ]
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
+  },
+  "keywords": [
+    "API",
+    "Backend"
+  ],
   "author": "Charles Elloit",
   "license": "MIT",
   "dependencies": {
@@ -21,6 +39,12 @@
   },
   "devDependencies": {
     "eslint": "^7.29.0",
-    "nodemon": "^2.0.7"
+    "husky": "^6.0.0",
+    "jest": "^27.0.4",
+    "lint-staged": "^11.0.0",
+    "nodemon": "^2.0.7",
+    "supertest": "^6.1.3",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-config-airbnb-base": "^14.2.1"
   }
 }
