@@ -6,7 +6,8 @@
     "start": "node index.js",
     "watch:dev": "nodemon index.js",
     "dev": "yarn run watch:dev",
-    "test": "jest",
+    "test": "jest --forceExit",
+    "test:coverage": "jest --collect-coverage",
     "lint": "node ./node_modules/eslint/bin/eslint . --ignore-path .gitignore",
     "eslint:github-action": "node ./node_modules/eslint/bin/eslint . --ignore-path .gitignore --max-warnings 0",
     "prepare": "husky install"
