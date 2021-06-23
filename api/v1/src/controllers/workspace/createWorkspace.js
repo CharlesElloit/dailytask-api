@@ -11,7 +11,7 @@ const createWorkspace = async (req, res, next) => {
   }
   await workspace.save();
   res.status(201).json({
-    sucess: true,
+    success: true,
     id: workspace._id,
     message: "Workspace created successfully",
   });
