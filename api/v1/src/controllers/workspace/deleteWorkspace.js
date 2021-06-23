@@ -1,8 +1,7 @@
 const { Workspace } = require("../../models");
 
 const deleteWorkspace = async (req, res, next) => {
-  const workspaceId = req.params.id;
-  const workspace = await Workspace.findOneAndDelete({ _id: workspaceId });
+  const workspace = await Workspace.findOneAndDelete({ _id: req.params.id });
   if (!workspace) {
     return res.status(500).json({
       success: false,
