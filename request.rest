@@ -1,13 +1,21 @@
 ### create workspace
-POST http://localhost:4000/workspace/add
+POST http://localhost:4000/workspaces/add
 Content-Type: application/json
 
 {
-  "title": "Eklow projects"
+  "title": ""
 }
 
 ### get all workspaces
 GET http://localhost:4000/workspaces
 
+### update workspace
+POST http://localhost:4000/workspace/60d2d6487dbac32dc88a94a7
+Content-Type: application/json
+
+{
+  "title": ""
+}
+
 ### delete workspace
-DELETE  http://localhost:4000/workspace/60ccc25743d6d02a8c4ef3cc
+DELETE  http://localhost:4000/workspace/60d2d6487dbac32dc88a94a7
