@@ -2,15 +2,15 @@
   Dialytasks API
 </h1>
 
-<p align="center">
-  Dailytasks API is a backend for Dailytask management <br> system. You can view the api here: <a href="https://dailytasks-api.herokuapp.com/workspaces">https://dailytasks-api</a>
+<p align="center" style="margin-bottom: 3rem">
+  Dailytasks API is a backend for Dailytask management system. 
 </p>
 
 ## Contributing Guide.
 The contributing guide is described in [`CONTRIBUTIN.md`](CONTRIBUTING.md).<br>
 Your contributation will be highly appreciatived.
 
-## **Please don't spam the API.**
+
 ## EndPoints
 
 ### Workspace
@@ -27,8 +27,8 @@ Your contributation will be highly appreciatived.
 |    Methods    |          Routes         |       Description     |
 | :-----------: | ------------------------|-----------
 |      GET      |    /projects            | This endpoint return all the records
-|      POST     |    /projects/add        | This endpoint creates a new workspace.
-|      PUT      |    /project/:id         | This endpoint udpates a specific workspace.
-|      DELETE   |    /project/:id         | This endpoint deletes a specific workspace.
+|      POST     |    /projects/add        | This endpoint creates a new project.
+|      PUT      |    /project/:id         | This endpoint udpates a specific project.
+|      DELETE   |    /project/:id         | This endpoint deletes a specific project.
 
 
