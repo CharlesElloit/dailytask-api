@@ -18,7 +18,7 @@ const userSchema = new mongoose.Schema({
     default: "https://thumbs.dreamstime.com/b/default-avatar-profile-icon-vector-social-media-user-image-182145777.jpg",
   },
   password: {
-    type: String, required: true, max: 255,
+    type: String, required: true, max: 255, select: false,
   },
 }, { timestamps: true });
 
