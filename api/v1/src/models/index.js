@@ -1,3 +1,6 @@
 module.exports = {
-  Workspace: require("./Workspace.modal"),
+  User: require("./User.model"),
+  Workspace: require("./Workspace.model"),
+  Project: require("./Project.model"),
+  Task: require("./Task.model"),
 };
