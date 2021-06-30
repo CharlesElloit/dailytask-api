@@ -13,7 +13,7 @@ const validateSignup = (data) => {
       .trim()
       .strip()
       .empty()
-      .pattern(new RegExp("^[a-zA-Z0-9]{3,30}$")),
+      .pattern(new RegExp(/^[a-zA-Z0-9!@#$%&*]{3,25}$/)),
   });
   return schema.validate(data);
 };
