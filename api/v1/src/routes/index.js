@@ -6,6 +6,7 @@ const projectController = require("../controllers/project");
 
 // user routes
 router.post("/signup", catchErrors(userController.signup));
+router.post("/signin", catchErrors(userController.signin));
 // workspace routes
 router.post("/workspaces/add", catchErrors(workspaceController.createWorkspace));
 router.get("/workspaces", catchErrors(workspaceController.getAllWorkspaces));
