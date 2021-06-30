@@ -7,28 +7,12 @@
 </p>
 
 ## Contributing Guide.
-The contributing guide is described in [`CONTRIBUTIN.md`](CONTRIBUTING.md).<br>
-Your contributation will be highly appreciatived.
 
+Contributions are always welcome!.<br>
+The contributing guide is described in [`CONTRIBUTIN.md`](CONTRIBUTING.md) for ways to get you started. <br>
+Please adhere to this project's [`CODE_OF_CONDUCT`](CODE_OF_CONDUCT.md).
+Your contributation will <br> be highly appreciatived.
 
-## EndPoints
+## API Reference
 
-### Workspace
-
-|    Methods    |          Routes         |       Description     |
-| :-----------: | ------------------------|-----------
-|      GET      |    /workspaces          | This endpoint return all the records
-|      POST     |    /workspaces/add      | This endpoint creates a new workspace.
-|      PUT      |    /workspace/:id      | This endpoint udpates a specific workspace.
-|      DELETE   |    /workspace/:id      | This endpoint deletes a specific workspace.
-
-### Projects TODO
-
-|    Methods    |          Routes         |       Description     |
-| :-----------: | ------------------------|-----------
-|      GET      |    /projects            | This endpoint return all the records
-|      POST     |    /projects/add        | This endpoint creates a new project.
-|      PUT      |    /project/:id         | This endpoint udpates a specific project.
-|      DELETE   |    /project/:id         | This endpoint deletes a specific project.
-
-
+To get a gist of how the api works, check the api referece described in [`API_REFERENCE`](docs/API-Reference.md)
