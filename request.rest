@@ -1,3 +1,23 @@
+# user Routes
+# create routes
+POST http://localhost:4000/signup
+Content-Type: application/json
+
+{
+  "username": "dffs",
+  "email": "charleselloit@gmail.com",
+  "password": "char-%$"
+}
+
+### signin route
+POST http://localhost:4000/signin
+Content-Type: application/json
+
+{
+  "email": "charleselloit@gmail.com",
+  "password": "charles"
+}
+
 ### create workspace
 POST http://localhost:4000/workspaces/add
 Content-Type: application/json
@@ -19,3 +39,18 @@ Content-Type: application/json
 
 ### delete workspace
 DELETE  http://localhost:4000/workspace/60d2d6487dbac32dc88a94a7
+
+# Project Routes
+
+# Create new Project
+###
+POST http://localhost:4000/projects/add
+Content-Type: applicaion/json
+
+{
+  "name": "dailytasks"
+}
+
+# Search route
+###
+GET http://localhost:4000/search?q=digit
