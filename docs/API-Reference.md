@@ -24,15 +24,28 @@
   GET /workspaces
 ```
 
-### Example
+#### Example
 ```json
 {
-  "_id": "60dabf3b31e9180004c4653c",
-  "title": "Digital Marketing",
-  "projects": [],
-  "createdAt": "2021-06-29T06:35:39.891Z",
-  "updatedAt": "2021-06-29T06:35:39.891Z",
-  "__v": 0
+  "success": true,
+  "results": [
+    {
+      "_id": "60dabf3b31e9180004c4653c",
+      "projects": [],
+      "title": "Digital Marketing",
+      "createdAt": "2021-06-29T06:35:39.891Z",
+      "updatedAt": "2021-06-29T06:35:39.891Z",
+      "__v": 0
+    },
+    {
+      "_id": "70dksikd1e8028jkdmeikdk",
+      "projects": [],
+      "title": "my workspace",
+      "createdAt": "2021-06-29T06:49:05.701Z",
+      "updatedAt": "2021-06-29T06:49:05.701Z",
+      "__v": 0
+    },
+  ]
 }
 ```
 #### Get workspace
@@ -48,12 +61,17 @@
 #### Example
 ```json
 {
-  "_id": "60dabf3b31e9180004c4653c",
-  "title": "Digital Marketing",
-  "projects": [],
-  "createdAt": "2021-06-29T06:35:39.891Z",
-  "updatedAt": "2021-06-29T06:35:39.891Z",
-  "__v": 0
+  "success": true,
+  "results": [
+    {
+      "_id": "60dabf3b31e9180004c4653c",
+      "projects": [],
+      "title": "my workspace",
+      "createdAt": "2021-06-29T06:35:39.891Z",
+      "updatedAt": "2021-06-29T06:35:39.891Z",
+      "__v": 0
+    }
+  ]
 }
 ```
 
@@ -68,7 +86,7 @@
 | `id`      | `string` | **Required**. Id of workspace to fetch |
 | `title`   | `string` | **Required**. New Title for the workspace   |
 
-### Example
+#### Example
 ```json
 {
   "title": "Web dev"
