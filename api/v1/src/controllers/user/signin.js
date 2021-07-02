@@ -19,7 +19,7 @@ const signin = async (req, res) => {
       const { _id, username, email } = userInfo;
       const payload = { userId: _id, username, email };
 
-      const token = jwt.sign(payload, process.env.SECRET_KEY);
+      const token = jwt.sign(payload, process.env.ACCESS_TOKEN_SECRET);
       req.headers.authorization = token;
       res.status(200).json({ token });
     } else {
