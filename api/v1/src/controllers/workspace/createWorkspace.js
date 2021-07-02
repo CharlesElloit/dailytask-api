@@ -10,6 +10,9 @@ const createWorkspace = async (req, res, next) => {
   }
   const workspace = new Workspace({
     title: req.body.title,
+    created: {
+      by: req.user.userId,
+    },
   });
 
   // TODO: Instead of checking with the title, check if the in user's has a
