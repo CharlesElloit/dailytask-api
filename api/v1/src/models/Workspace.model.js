@@ -7,6 +7,11 @@ const workspaceSchema = new mongoose.Schema({
   projects: [
     { type: mongoose.Schema.Types.ObjectId, ref: "Project" },
   ],
-}, { timestamps: true });
+  created: {
+    at: { type: Date, default: Date.now },
+    by: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
+  },
+  updatedAt: { type: Date, default: Date.now },
+});
 
 module.exports = mongoose.model("Workspace", workspaceSchema);
