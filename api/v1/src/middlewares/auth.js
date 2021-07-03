@@ -1,6 +1,6 @@
 const jwt = require("jsonwebtoken");
 
-module.exports.auth = async (req, _res, next) => {
+module.exports.auth = async (req, res, next) => {
   const { authorization } = req.headers;
   try {
     if (authorization && authorization.startsWith("Bearer ")) {
@@ -10,9 +10,9 @@ module.exports.auth = async (req, _res, next) => {
       req.user = verified;
       next();
     } else {
-      throw new Error("Unauthorized access");
+      res.status(403).json({ error: "Unauthorized access" });
     }
   } catch (error) {
-    console.log(error);
+    console.log(error.message);
   }
 };
