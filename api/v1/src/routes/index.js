@@ -11,8 +11,9 @@ router.post("/signin", catchErrors(userController.signin));
 // workspace routes
 router.post("/workspaces/add", auth, catchErrors(workspaceController.createWorkspace));
 router.get("/workspaces", auth, catchErrors(workspaceController.getAllWorkspaces));
-router.put("/workspace/:id", catchErrors(workspaceController.updateWorkspace));
-router.delete("/workspace/:id", catchErrors(workspaceController.deleteWorkspace));
+router.get("/workspace/:id", auth, catchErrors(workspaceController.getWorkspace));
+router.put("/workspace/:id", auth, catchErrors(workspaceController.updateWorkspace));
+router.delete("/workspace/:id", auth, catchErrors(workspaceController.deleteWorkspace));
 router.get("/search", catchErrors(workspaceController.searchWorkspace));
 router.post("/projects/add", catchErrors(projectController.createProject));
 
