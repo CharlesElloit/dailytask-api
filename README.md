@@ -15,4 +15,4 @@ Your contributation will <br> be highly appreciatived.
 
 ## Documentation
 
-To get a gist of how the api works, check the api docs here:<br> [`dailytasks-api-docs`](http://localhost:4000/dailytasks-api-docs), just make your server runing before access the link.
+To get a gist of how the api works, check the api docs here:<br> [`dailytasks-api-docs`](http://localhost:4000/dailytasks-api-docs), just make sure your server is runing before access the link.
