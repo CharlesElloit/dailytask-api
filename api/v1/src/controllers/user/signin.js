@@ -3,6 +3,42 @@ const jwt = require("jsonwebtoken");
 const collection = require("../../models");
 const validateLogin = require("../../validations/signin.validator");
 
+/**
+ * @swagger
+ * /signin:
+ *   post:
+ *    summary: This sign or login user.
+ *    tags: [User]
+ *    requestBody:
+ *      required: true
+ *      content:
+ *        application/json:
+ *          schema:
+ *             type: object
+ *             required:
+ *               - email
+ *               - password
+ *             properties:
+ *               email:
+ *                 type: string
+ *                 required: true
+ *                 description: The email to login with
+ *               password:
+ *                 type: string
+ *                 required: true
+ *                 description: The password for this account
+ *    responses:
+ *       200:
+ *         description: signin successfully.
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/User'
+ *       400:
+ *         description: Bad request.
+ *       500:
+ *         description: Server Error.
+ */
 const signin = async (req, res) => {
   const { error } = await validateLogin(req.body);
 

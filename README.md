@@ -13,6 +13,6 @@ The contributing guide is described in [`CONTRIBUTIN.md`](CONTRIBUTING.md) for w
 Please adhere to this project's [`CODE_OF_CONDUCT`](CODE_OF_CONDUCT.md).
 Your contributation will <br> be highly appreciatived.
 
-## API Reference
+## Documentation
 
-To get a gist of how the api works, check the api referece described in [`API_REFERENCE`](docs/API-Reference.md)
+To get a gist of how the api works, check the api docs here:<br> [`dailytasks-api-docs`](http://localhost:4000/dailytasks-api-docs), just make your server runing before access the link.

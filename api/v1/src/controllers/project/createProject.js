@@ -6,15 +6,27 @@ const createProject = async (req, res) => {
     workspace: req.body.workspace,
     bgColor: req.body.bgColor,
     create: {
-      by: req.headers.user.id,
+      by: req.user.userId,
     },
     update: {
-      by: req.headers.user.id,
+      by: req.user.userId,
     },
   });
-
+  if (!project) {
+    return res.status(400).jsn({
+      message: "something went wrong when creating the project.",
+    });
+  }
+  const newProject = await Project.create(project);
+  if (!newProject) {
+    return res.status(500).json({
+      message: "something went wrong.",
+    });
+  }
   res.json({
-    message: "it's working.",
+    success: true,
+    id: project._id,
+    message: "project created successfully!",
   });
 };
 

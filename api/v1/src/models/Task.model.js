@@ -8,7 +8,7 @@ const taskSchema = new mongoose.Schema({
   assignee: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
   due: { type: Date, default: Date.now, required: true },
   priority: {
-    type: String, trim: true, default: "low", lowcase: true, max: 6,
+    type: String, trim: true, default: "low", lowcase: true, max: 6, // low, medium or high
   },
   project: { type: mongoose.Schema.Types.ObjectId, ref: "Project" },
   type: {

@@ -15,6 +15,8 @@ router.get("/workspace/:id", auth, catchErrors(workspaceController.getWorkspace)
 router.put("/workspace/:id", auth, catchErrors(workspaceController.updateWorkspace));
 router.delete("/workspace/:id", auth, catchErrors(workspaceController.deleteWorkspace));
 router.get("/search", catchErrors(workspaceController.searchWorkspace));
-router.post("/projects/add", catchErrors(projectController.createProject));
+// project routes
+router.post("/projects/add", auth, catchErrors(projectController.createProject));
+router.get("/projects/:workspaceId", auth, catchErrors(projectController.getAllProjects));
 
 module.exports = router;

@@ -1,6 +1,37 @@
 const { Workspace } = require("../../models");
 const { validateWorkspace } = require("../../validations/workspace.validations");
 
+/**
+ * @swagger
+ * /workspaces/add:
+ *   post:
+ *    summary: This creates new workspace for a specific user.
+ *    tags: [Workspace]
+ *    requestBody:
+ *      required: true
+ *      content:
+ *        application/json:
+ *          schema:
+ *             type: object
+ *             required:
+ *               - title
+ *             properties:
+ *               title:
+ *                 type: string
+ *                 required: true
+ *                 description: The name for the workspace
+ *    responses:
+ *       201:
+ *         description: Workspace created successfully.
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Workspace'
+ *       400:
+ *         description: Bad request.
+ *       500:
+ *         description: Server Error.
+ */
 const createWorkspace = async (req, res, next) => {
   const { error } = await validateWorkspace(req.body);
   if (error) {

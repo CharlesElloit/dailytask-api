@@ -4,9 +4,6 @@ const workspaceSchema = new mongoose.Schema({
   title: {
     type: String, required: true, trim: true, lowercase: true, max: 100,
   },
-  projects: [
-    { type: mongoose.Schema.Types.ObjectId, ref: "Project" },
-  ],
   created: {
     at: { type: Date, default: Date.now },
     by: { type: mongoose.Schema.Types.ObjectId, ref: "User" },

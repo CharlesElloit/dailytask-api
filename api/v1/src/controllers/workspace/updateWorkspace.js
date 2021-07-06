@@ -1,6 +1,38 @@
 const db = require("../../models");
 const { validateWorkspace } = require("../../validations/workspace.validations");
 
+/**
+ * @swagger
+ * /workspace/{id}:
+ *   put:
+ *    summary: This updates a specific user workspace.
+ *    tags: [Workspace]
+ *    requestBody:
+ *      required: true
+ *      content:
+ *        application/json:
+ *          schema:
+ *             type: object
+ *             required:
+ *               - title
+ *             properties:
+ *               title:
+ *                 type: string
+ *                 required: true
+ *                 description: The name for the workspace
+ *    responses:
+ *       200:
+ *         description: Workspace updated successfully.
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Workspace'
+ *       400:
+ *         description: Bad request.
+ *       500:
+ *         description: Server Error.
+ */
+
 const updateWorkspace = async (req, res) => {
   const { error } = validateWorkspace(req.body);
   if (error) {

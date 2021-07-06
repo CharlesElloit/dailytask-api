@@ -7,9 +7,6 @@ const projectSchema = new mongoose.Schema({
   workspace: {
     type: mongoose.Schema.Types.ObjectId, ref: "Workspace", required: true,
   },
-  tasks: [
-    { type: mongoose.Schema.Types.ObjectId, ref: "Task" },
-  ],
   bgColor: {
     type: String, trim: true,
   },

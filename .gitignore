@@ -3,3 +3,5 @@ node_modules
 .reference
 .copy
 /coverage
+/documentation
+/api/v1/src/helpers

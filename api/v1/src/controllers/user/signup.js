@@ -2,6 +2,53 @@ const bcrypt = require("bcrypt");
 const collection = require("../../models");
 const validateSignup = require("../../validations/signup.validator");
 
+/**
+ * @swagger
+ * /signup:
+ *   post:
+ *    summary: This signup or creates new user.
+ *    tags: [User]
+ *    requestBody:
+ *      required: true
+ *      content:
+ *        application/json:
+ *          schema:
+ *             type: object
+ *             required:
+ *               - email
+ *               - username
+ *               - password
+ *               - password again
+ *             properties:
+ *               email:
+ *                 type: string
+ *                 required: true
+ *                 description: The email
+ *               username:
+ *                 type: string
+ *                 required: true
+ *                 description: The username.
+ *               password:
+ *                 type: string
+ *                 required: true
+ *                 description: The password for this account
+ *               passwordAgain:
+ *                 type: string
+ *                 required: true
+ *                 description: Confirm password
+ *    responses:
+ *       200:
+ *         description: user created successfully.
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/User'
+ *       400:
+ *         description: Bad request.
+ *       500:
+ *         description: Server Error.
+ */
+
 const signup = async (req, res) => {
   const { error } = await validateSignup(req.body);
   if (error) {

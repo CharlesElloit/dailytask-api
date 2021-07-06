@@ -1,5 +1,21 @@
 const { Workspace } = require("../../models");
 
+/**
+ * @swagger
+ * /workspaces:
+ *   get:
+ *    summary: This return all workspace for a specific user account.
+ *    tags: [Workspace]
+ *    responses:
+ *       200:
+ *         description: The list of the workspace.
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: array
+ *               items:
+ *                 $ref: '#/components/schemas/Workspace'
+ */
 const getAllWorkspace = async (req, res) => {
   const workspaces = await Workspace.find({})
     .where("created.by").equals(req.user.userId);

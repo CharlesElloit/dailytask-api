@@ -38,7 +38,10 @@
     "joi": "^17.4.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.12.14",
-    "sanitize-html": "^2.4.0"
+    "redis": "^3.1.2",
+    "sanitize-html": "^2.4.0",
+    "swagger-jsdoc": "^6.1.0",
+    "swagger-ui-express": "^4.1.6"
   },
   "devDependencies": {
     "eslint": "^7.29.0",
