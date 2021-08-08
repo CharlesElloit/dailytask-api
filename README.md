@@ -1,10 +1,10 @@
-<h1 align="center">
-  Dialytasks API
-</h1>
-
-<p align="center" style="margin-bottom: 3rem">
+<div align="center">
+  <h1>Dialytasks API</h1>
+  
   Dailytasks API is a backend for Dailytask management system. 
-</p>
+</div>
+
+
 
 ## Contributing Guide.
 
