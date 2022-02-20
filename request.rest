@@ -56,7 +56,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGRhN
 {
   "name": "dailytaks-api",
   "workspace": "60df597ba26732201066d89b",
-  "bgColor": "lightpink"
+  "bgColor": "#FAFAFA"
 }
 
 ### get all projects for a specific workspace
