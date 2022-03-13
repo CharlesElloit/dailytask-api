@@ -1,0 +1,29 @@
+input SignUpInput {
+  email: String!
+  username: String!
+  password: String!
+  confirm_password: String!
+}
+
+input SignInInput {
+  email: String!
+  password: String!
+}
+
+type SignUpReturnType {
+  id: ID!
+  message: String!
+}
+
+type SignInReturnType {
+  token: String!
+}
+
+type User {
+  id: ID!
+  avatar: String!
+  email: String!
+  username: String!
+  createdAt: Date!
+  updatedAt: Date!
+}

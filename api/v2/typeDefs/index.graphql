@@ -1,0 +1,11 @@
+type Query {
+  workspaces: [Workspace!]
+}
+
+type Mutation {
+  signUp(user: SignUpInput): SignUpReturnType!
+  signIn(user: SignInInput): SignInReturnType!
+
+  #workspace
+  createWorkspace(input: WorkspaceInput): WorkspaceReturnType!
+}

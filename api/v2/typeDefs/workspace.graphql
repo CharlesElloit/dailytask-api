@@ -1,0 +1,18 @@
+input WorkspaceInput {
+  title: String!
+  owner: ID!
+}
+
+type WorkspaceReturnType {
+  id: ID!
+  message: String!
+}
+
+type Workspace {
+  id: ID!
+  title: String!
+  owner: User!
+  # members: [Users!]
+  createdAt: Date!
+  updatedAt: Date!
+}
