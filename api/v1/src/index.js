@@ -7,7 +7,7 @@ const swaggerJSDOC = require("swagger-jsdoc");
 require("dotenv").config();
 const appRoutes = require("./routes");
 const swaggerOptions = require("../docs/swagger/swagger.options");
-const { db } = require("../../config/database.config");
+// const { db } = require("../../config/database.config");
 
 const app = express();
 
@@ -17,7 +17,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Connecting to db
-db.connect(process.env.MONGODB_URI);
+// db.connect(process.env.MONGODB_URI);
 
 const swaggerSpecs = swaggerJSDOC(swaggerOptions);
 
