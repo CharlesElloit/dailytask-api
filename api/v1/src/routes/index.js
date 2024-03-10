@@ -23,5 +23,6 @@ router.get("/projects/:workspaceId", auth, catchErrors(projectController.getAllP
 router.get("/api/issues", issuesController.issues);
 router.get("/api/issues/:id", issuesController.issue);
 router.post("/api/issues", issuesController.createIssue);
+router.delete("/api/issues/:id", issuesController.deleteIssue);
 
 module.exports = router;

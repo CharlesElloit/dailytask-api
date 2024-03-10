@@ -3,5 +3,5 @@ module.exports = {
   issues: require("./getAllTasks"),
   issue: require("./getIssue"),
   updateTask: require("./updateTask"),
-  deleteTask: require("./deleteTask"),
+  deleteIssue: require("./deleteTask"),
 };
